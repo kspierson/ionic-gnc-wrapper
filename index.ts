@@ -22,6 +22,21 @@ export class GoogleNearbyConnections extends IonicNativePlugin {
       return;
   }
 
+  @Cordova()
+  stopAdvertising(): Promise<any> {
+    return;
+  }
+
+  @Cordova()
+  stopDiscovery(): Promise<any> {
+    return;
+  }
+
+  @Cordova()
+  stopAllEndpoints(): Promise<any> {
+    return;
+  }
+
   @Cordova({
     observable: true
   })
@@ -57,24 +72,18 @@ export class GoogleNearbyConnections extends IonicNativePlugin {
     return;
   }
 
-  @Cordova({
-    observable: true
-  })
-  acceptConnection(endpointId: String): Observable<any> {
+  @Cordova()
+  acceptConnection(endpointId: String): Promise<any> {
     return;
   }
 
-  @Cordova({
-    observable: true
-  })
-  denyConnection(endpointId: String): Observable<any> {
+  @Cordova()
+  denyConnection(endpointId: String): Promise<any> {
     return;
   }
 
-  @Cordova({
-    observable: true
-  })
-  sendPayload(endpointId: String, payload: String): Observable<any> {
+  @Cordova()
+  sendPayload(endpointId: String, payload: String): Promise<any> {
     return;
   }
 
@@ -82,6 +91,11 @@ export class GoogleNearbyConnections extends IonicNativePlugin {
     observable: true
   })
   onPayloadReceived(): Observable<any> {
+    return;
+  }
+
+  @Cordova()
+  disconnectFromEndpoint(endpointId: String): Promise<any> {
     return;
   }
 
